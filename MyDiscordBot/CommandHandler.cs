@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 
-namespace DiscordFirstBot
+namespace MyDiscordBot
 {
     class CommandHandler
     {

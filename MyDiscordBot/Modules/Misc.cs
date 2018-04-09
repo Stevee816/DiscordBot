@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Discord.WebSocket;
 
-namespace DiscordFirstBot.Modules
+namespace MyDiscordBot.Modules
 {
     public class Misc : ModuleBase<SocketCommandContext>
     {
@@ -62,7 +62,7 @@ namespace DiscordFirstBot.Modules
 
         private bool UserIsSecretOwner(SocketGuildUser user)
         {
-            string targerRoleName = "EFT Team";
+            string targerRoleName = "EFTTeam";
             var result = from r in user.Guild.Roles
                          where r.Name == targerRoleName
                          select r.Id;

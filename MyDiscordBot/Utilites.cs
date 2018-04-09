@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace DiscordFirstBot
+namespace MyDiscordBot
 {
     class Utilities
     {
