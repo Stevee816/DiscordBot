@@ -49,7 +49,7 @@ namespace MyDiscordBot.Modules
         }
 
         [Command("secret")]
-        public async Task RevealSecret([Remainder]string message)
+        public async Task RevealSecret([Remainder]string message = "")
         {
             if (!UserIsSecretOwner((SocketGuildUser)Context.User))
             {
