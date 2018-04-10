@@ -11,19 +11,19 @@ namespace MyDiscordBot.Modules
 {
     public class Misc : ModuleBase<SocketCommandContext>
     {
-        //[Command("Imbed")]
-        //public async Task Imbed([Remainder]string message)
-        //{
-        //    var embed = new EmbedBuilder();
-        //    embed.WithTitle("Message By: " + Context.User.Username);
-        //    embed.WithDescription(message);
-        //    embed.WithColor(new Color(0, 255, 255));
-        //
-        //    await Context.Channel.SendMessageAsync("", false, embed);
-        //}
-
         [Command("Imbed")]
         public async Task Imbed([Remainder]string message)
+        {
+            var embed = new EmbedBuilder();
+            embed.WithTitle("Message By: " + Context.User.Username);
+            embed.WithDescription(message);
+            embed.WithColor(new Color(0, 255, 255));
+        
+            await Context.Channel.SendMessageAsync("", false, embed);
+        }
+
+        [Command("Credits")]
+        public async Task Credits([Remainder]string arg = "")
         {
             var embed = new EmbedBuilder();
             embed.WithTitle("Credits go to the following people for helping make this bot a reality!");
