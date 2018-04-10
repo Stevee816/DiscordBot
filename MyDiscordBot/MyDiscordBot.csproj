@@ -137,6 +137,7 @@
     <Compile Include="Modules\Misc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userInfo.cs" />
     <Compile Include="Utilites.cs" />
   </ItemGroup>
   <ItemGroup>

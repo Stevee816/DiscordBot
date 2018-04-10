@@ -22,6 +22,7 @@ namespace MyDiscordBot.Modules
             await Context.Channel.SendMessageAsync("", false, embed);
         }
 
+
         [Command("pick")]
         public async Task PickOne([Remainder]string message)
         {
@@ -47,13 +48,14 @@ namespace MyDiscordBot.Modules
             var dmChannel = await Context.User.GetOrCreateDMChannelAsync();
             await dmChannel.SendMessageAsync(Utilities.GetAlert("PM"));
         }
+        
 
         [Command("secret")]
         public async Task RevealSecret([Remainder]string message = "")
         {
             if (!UserIsSecretOwner((SocketGuildUser)Context.User))
             {
-                await Context.Channel.SendMessageAsync(":x You do not have required permision!" + Context.User.Mention);
+                await Context.Channel.SendMessageAsync(":x: You do not have required permision!" + Context.User.Mention);
                 return;
             }
             var dmChannel = await Context.User.GetOrCreateDMChannelAsync();
@@ -71,6 +73,19 @@ namespace MyDiscordBot.Modules
             var targetRole = user.Guild.GetRole(roleID);
             return user.Roles.Contains(targetRole);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }

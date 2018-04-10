@@ -13,8 +13,6 @@ namespace MyDiscordBot
         DiscordSocketClient _client;
         CommandHandler _handler;
 
-
-
         static void Main(string[] args)
         => new Program().StartAsync().GetAwaiter().GetResult();
 
@@ -30,6 +28,7 @@ namespace MyDiscordBot
             await _client.StartAsync();
             _handler = new CommandHandler();
             await _handler.InitializeAsync(_client);
+            await _client.SetGameAsync("Being Developed");
             await Task.Delay(-1);
         }
 
@@ -37,6 +36,8 @@ namespace MyDiscordBot
         {
             Console.WriteLine(msg.Message);
         }
+
+
     }
 
 
