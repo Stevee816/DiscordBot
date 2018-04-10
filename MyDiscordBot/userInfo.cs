@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiscordJustineBot.Modules
+namespace MyDiscordBot.Modules
 {
     public class Info : ModuleBase<SocketCommandContext>
     {

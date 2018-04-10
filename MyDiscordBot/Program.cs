@@ -12,6 +12,7 @@ namespace MyDiscordBot
     {
         DiscordSocketClient _client;
         CommandHandler _handler;
+        private bool number;
 
         static void Main(string[] args)
         => new Program().StartAsync().GetAwaiter().GetResult();
