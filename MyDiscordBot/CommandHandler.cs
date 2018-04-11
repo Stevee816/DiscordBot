@@ -23,9 +23,10 @@ namespace MyDiscordBot
             _client.UserJoined += _client_UserJoined;
         }
 
-        private async Task _client_UserJoined(SocketGuildUser arg)
+        private async Task _client_UserJoined(SocketGuildUser user)
         {
-            throw new NotImplementedException();
+            var welcomechannel = _client.GetChannel(433562952734474243) as SocketTextChannel;
+            await welcomechannel.SendMessageAsync($"Welcome {welcomechannel.user.Mention}");
         }
 
         private async Task HandleCommandAsync(SocketMessage s)
