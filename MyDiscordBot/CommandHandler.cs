@@ -20,6 +20,12 @@ namespace MyDiscordBot
             _service = new CommandService();
             await _service.AddModulesAsync(Assembly.GetEntryAssembly());
             _client.MessageReceived += HandleCommandAsync;
+            _client.UserJoined += _client_UserJoined;
+        }
+
+        private async Task _client_UserJoined(SocketGuildUser arg)
+        {
+            throw new NotImplementedException();
         }
 
         private async Task HandleCommandAsync(SocketMessage s)
