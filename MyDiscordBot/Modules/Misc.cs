@@ -46,7 +46,7 @@ namespace MyDiscordBot.Modules
             var embed = new EmbedBuilder();
             embed.WithTitle("Choice for " + Context.User.Username);
             embed.WithDescription(selection);
-            embed.WithColor(new Color(255, 0, 255));
+            embed.WithColor(new Color(255, 255, 0));
             embed.WithThumbnailUrl("http://www.anothercrowd.com/sites/default/files/flipacoin.jpeg");
 
             await Context.Channel.SendMessageAsync("", false, embed);

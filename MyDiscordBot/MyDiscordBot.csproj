@@ -138,12 +138,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandHandler.cs" />
-    <Compile Include="Commands.cs" />
+    <Compile Include="Modules\ArmaCommands.cs" />
+    <Compile Include="Modules\MiscCommands.cs" />
+    <Compile Include="Modules\Commands.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Modules\EFTCommands.cs" />
+    <Compile Include="Modules\MinecraftCommands.cs" />
     <Compile Include="Modules\Misc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="userInfo.cs" />
+    <Compile Include="Modules\userInfo.cs" />
     <Compile Include="Utilites.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -61,22 +61,7 @@ namespace Nozomi.Modules
         }
 
 
-        [Command("pick")]
-        public async Task pick([Remainder]string message)
-        {
-            string[] options = message.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
-            Random r = new Random();
-            string seletion = options[r.Next(0, options.Length)];
-
-            var embed = new EmbedBuilder();
-            embed.WithAuthor(" :thinking: I choose ");
-            embed.WithDescription(seletion);
-            embed.WithColor(new Color(255, 255, 0));
-            embed.WithThumbnailUrl("https://vignette.wikia.nocookie.net/creepypasta/images/e/e2/Anime-Girl-With-Silver-Hair-And-Purple-Eyes-HD-Wallpaper.jpg/revision/latest?cb=20140120061808");
-            await Context.Channel.SendMessageAsync("", false, embed);
-        }
-
-
+        
         [Command("Avatar")]
         [Summary("Get the user avatar mentioned")]
         [RequireBotPermission(ChannelPermission.SendMessages)]
