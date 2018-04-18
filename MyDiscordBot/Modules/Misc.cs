@@ -73,6 +73,15 @@ namespace MyDiscordBot.Modules
             await dmChannel.SendMessageAsync(Utilities.GetAlert("SECRET"));
         }
 
+
+        [Command("data")]
+        public async Task GetData()
+        {
+            await Context.Channel.SendMessageAsync("Data Has " + DataStorage.GetPairsCount() + " pairs.");
+            DataStorage.AddPairToStorage("Count" + DataStorage.GetPairsCount(), "TheCount" + DataStorage.GetPairsCount());
+        }
+
+
         private bool UserIsSecretOwner(SocketGuildUser user)
         {
             string targerRoleName = "EFTTeam";

@@ -20,14 +20,14 @@ namespace MyDiscordBot
             _service = new CommandService();
             await _service.AddModulesAsync(Assembly.GetEntryAssembly());
             _client.MessageReceived += HandleCommandAsync;
-            _client.UserJoined += _client_UserJoined;
+          //  _client.UserJoined += _client_UserJoined;
         }
 
-        private async Task _client_UserJoined(SocketGuildUser user)
-        {
-            var welcomechannel = _client.GetChannel(433562952734474243) as SocketTextChannel;
-            await welcomechannel.SendMessageAsync($"Welcome {welcomechannel.user.Mention}");
-        }
+        //private async Task _client_UserJoined(SocketGuildUser user)
+        //{
+        //    var welcomechannel = _client.GetChannel(433562952734474243) as SocketTextChannel;
+        //    await welcomechannel.SendMessageAsync($"Welcome {welcomechannel.user.Mention}");
+        //}
 
         private async Task HandleCommandAsync(SocketMessage s)
         {
